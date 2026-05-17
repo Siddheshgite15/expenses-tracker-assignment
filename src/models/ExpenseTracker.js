@@ -2,11 +2,16 @@
  * ExpenseTracker Model
  * Manages all financial transactions with filtering and analytics capabilities
  */
+import Transaction from "./Transaction.js";
+
 export default class ExpenseTracker {
 
     constructor() {
-        this.transactions =
-            JSON.parse(localStorage.getItem("transactions")) || [];
+        const stored = JSON.parse(localStorage.getItem("transactions")) || [];
+        // Convert plain objects to Transaction instances
+        this.transactions = stored.map(t => 
+            new Transaction(t.id, t.title, t.amount, t.category, t.date)
+        );
     }
 
     /**
