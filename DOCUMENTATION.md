@@ -451,17 +451,6 @@ Date,Title,Category,Amount
 - Lazy loading of statistics on demand
 - Efficient filtering without unnecessary re-renders
 
----
-
-## Browser Compatibility
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
----
-
 ## Known Limitations & Future Enhancements
 
 ### Current Limitations
@@ -546,31 +535,4 @@ const thisMonth = tracker.getTransactionsByDateRange(
 );
 ```
 
----
-
-## Contributing
-
-To extend this project:
-
-1. Add new categories in ExpenseForm.jsx
-2. Create new statistics components in Statistics.jsx
-3. Add new filtering options in FilterPanel.jsx
-4. Extend ExpenseTracker model with new analytics methods
-5. Update CSS variables for theme customization
-
----
-
-## License
-
-This project is provided as-is for educational and personal use.
-
----
-
-## Support
-
-For issues or questions, review the code comments and this documentation. Each component includes JSDoc comments explaining functionality.
-
----
-
 **Last Updated:** May 17, 2026
-**Version:** 1.0.0
